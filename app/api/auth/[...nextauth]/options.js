@@ -36,6 +36,8 @@ export const options = {
                     return null
                 }
             }
+            
         })
     ],
+    secret: process.env.NEXTAUTH_SECRET,
 }
