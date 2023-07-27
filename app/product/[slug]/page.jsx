@@ -68,6 +68,8 @@ const ProductPage = () => {
           <Image
             src={activeImg || images[0]} // Use activeImg if available, else fallback to the first image
             alt=''
+            width={500}
+            height={500}
             className='w-[500px] h-[500px] aspect-square object-cover rounded-xl justify-center'
           />
           <div className='flex flex-row flex-start space-x-10 h-24'>
@@ -76,6 +78,9 @@ const ProductPage = () => {
               <Image
                 key={index}
                 src={images[key]}
+                width={100}
+                height={100}
+
                 alt={`Thumbnail ${index}`}
                 className={`w-16 h-16 object-cover cursor-pointer rounded-md ${activeImg === images[key] ? 'border-2 border-violet-600' : ''}`}
                 onClick={() => handleThumbnailClick(index)}
